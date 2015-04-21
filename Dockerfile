@@ -11,6 +11,6 @@ RUN apt-get install -y autoconf automake bash bison bzip2 cmake flex gettext \
 
 RUN git clone -b stable https://github.com/mxe/mxe.git /opt/mxe
 WORKDIR /opt/mxe
-RUN make -j2
+RUN make gcc -j2
 
 ENV PATH /opt/mxe/usr/bin:$PATH
